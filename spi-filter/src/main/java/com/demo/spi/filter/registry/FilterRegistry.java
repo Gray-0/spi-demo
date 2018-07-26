@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 import com.demo.spi.filter.IFilter;
 
 /**
- * 拦截器注册仓库
+ * 拦截器注册表
  * 
  * @author lizp
  * @date 2018年7月26日
@@ -45,13 +45,15 @@ public class FilterRegistry {
 	}
 
 	/**
-	 * 加载过滤器
+	 * 加载过滤器 <br>
+	 * 1.ServiceLoader的构造函数中调用reload()方法构造了LazyIterator
+	 * 2.filterIterator.hasNext()调用了LazyIterator的hasNextService()方法,其中会在META-INF/services/目录下找到对应要加载的类同名的文件进行载入
+	 * 3.filterIterator.next()调用了LazyIterator的nextService()方法,其中通过反射对配置的类全名进行实例化
 	 */
 	private static void loadFilters() {
 		ServiceLoader<IFilter> filterLoader = ServiceLoader.load(IFilter.class);
 		Iterator<IFilter> filterIterator = filterLoader.iterator();
 		while (filterIterator.hasNext()) {
-			// next方法中对META-INF/services/com.demo.spi.filter.IFilter中配置的类名通过反射进行实例化
 			IFilter filter = filterIterator.next();
 			registerFilter(filter);
 		}
