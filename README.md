@@ -1,6 +1,7 @@
 Demo of Java SPI
 
-学习java SPI机制的demo
+学习java SPI机制的demo  
+通过SPI机制构建过滤器调用调用链
 
 核心类  
 /spi-filter/src/main/java/com/demo/spi/filter/registry/FilterRegistry.java
