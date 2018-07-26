@@ -1,3 +1,0 @@
-com.demo.spi.filter.impl.LogFilter
-com.demo.spi.filter.impl.PreFilter
-com.demo.spi.filter.impl.AuthFilter
