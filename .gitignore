@@ -47,6 +47,7 @@ Thumbs.db
 */build
 .m2
 /classes
+*/bin
 # IntelliJ specific files/directories
 out
 .idea
