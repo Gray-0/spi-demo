@@ -22,6 +22,16 @@
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
+				<groupId>com.demo</groupId>
+				<artifactId>spi-filter-demo</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.demo</groupId>
+				<artifactId>spi-filter-demo2</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>${slf4j.version}</version>
@@ -56,8 +66,8 @@
 		</plugins>
 	</build>
 	<modules>
-		<module>spi-file-parser</module>
 		<module>spi-filter</module>
 		<module>spi-filter-demo</module>
+		<module>spi-filter-demo2</module>
 	</modules>
 </project>
