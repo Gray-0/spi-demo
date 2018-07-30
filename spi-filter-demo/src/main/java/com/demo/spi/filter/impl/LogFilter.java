@@ -1,5 +1,6 @@
 package com.demo.spi.filter.impl;
 
+import com.demo.spi.filter.AbstractFilter;
 import com.demo.spi.filter.context.FilterContext;
 
 /**
